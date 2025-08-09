@@ -6,7 +6,7 @@ construida con FastAPI y desplegada en Render, siguiendo las buenas prácticas v
 El objetivo es que logres empaquetar tu modelo como un servicio de predicción accesible a través de la web, incluyendo pruebas automatizadas desde un cliente y documentación que permita a un tercero 
 (en este caso, tu profesor) realizar consultas sin fricción.
 
-Repositorio de referencia: https://github.com/aastroza/producto-de-datos-apiEnlaces a un sitio externo.
+Repositorio de referencia: https://github.com/aastroza/producto-de-datos-api a un sitio externo.
 
 Instrucciones Generales
 
@@ -75,12 +75,12 @@ Para esto debes:
 
 **Evaluación**
 
-Parte	Puntaje
-API funcional en FastAPI	30 pts
-Despliegue en Render	20 pts
-Cliente con pruebas automáticas	30 pts
-Test del profesor (instrucciones + API)	20 pts
-Total	100 pts
+* API funcional en FastAPI	30 pts
+* Despliegue en Render	20 pts
+* Cliente con pruebas automáticas	30 pts
+* Test del profesor (instrucciones + API)	20 pts
+
+* Total	100 pts
 
 Recomendaciones
 
