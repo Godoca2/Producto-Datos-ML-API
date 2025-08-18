@@ -1,0 +1,10 @@
+fastapi>=0.110.0
+uvicorn>=0.30.0
+pydantic>=2.6.0
+pillow>=10.0.0
+# TensorFlow 2.19 requiere numpy < 2.2
+numpy>=1.26.0,<2.2.0
+pandas>=2.3.1
+requests>=2.31.0
+# En Linux (Render) instala TensorFlow (CPU) para inferencia del modelo
+tensorflow==2.19.0; platform_system == "Linux"

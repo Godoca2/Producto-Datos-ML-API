@@ -3,5 +3,17 @@ name = "producto-datos-ml-api"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = []
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "pandas>=2.3.1",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.30.0",
+    "pydantic>=2.6.0",
+    "pillow>=10.0.0",
+    # TensorFlow 2.19 requiere numpy < 2.2
+    "numpy>=1.26.0,<2.2.0",
+    # En Linux (Render) instalamos TensorFlow (CPU) para inferencia
+    "tensorflow==2.19.0; platform_system == 'Linux'",
+    # Cliente opcional para pruebas
+    "requests>=2.31.0",
+]

@@ -1,0 +1,9 @@
+app:
+  name: producto-datos-ml-api
+  host: 0.0.0.0
+  port: 8000
+model:
+  path: models/model.pkl
+  loader: joblib  # joblib | pickle
+predict:
+  threshold: 0.5

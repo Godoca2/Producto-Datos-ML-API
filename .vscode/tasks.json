@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run API (Uvicorn)",
+			"type": "shell",
+			"command": "powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command \". .\\.venv_nb\\Scripts\\Activate.ps1; uvicorn app.main:app --host 127.0.0.1 --port 8000\"",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
