@@ -49,15 +49,15 @@ Ver `docs/API_CONTRACT.md` para detalles completos.
 
 Petición con URL (PowerShell):
 ```powershell
-$body = @{ image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HST-SM4.jpeg/320px-HST-SM4.jpeg" } | ConvertTo-Json
-Invoke-RestMethod -Uri http://127.0.0.1:8000/predict -Method Post -Body $body -ContentType 'application/json'
+$body = @{ image_url = "https://picsum.photos/200/300" } | ConvertTo-Json
+Invoke-RestMethod -Uri https://producto-datos-ml-api.onrender.com/predict -Method Post -Body $body -ContentType 'application/json'
 ```
 
 Petición con Base64 (ejemplo ficticio):
 ```powershell
 $b64 = Get-Content .\tests\sample.b64 -Raw
 $body = @{ image_base64 = $b64 } | ConvertTo-Json
-Invoke-RestMethod -Uri http://127.0.0.1:8000/predict -Method Post -Body $body -ContentType 'application/json'
+Invoke-RestMethod -Uri https://producto-datos-ml-api.onrender.com/predict -Method Post -Body $body -ContentType 'application/json'
 ```
 
 ## Checklist QA Local
@@ -72,13 +72,13 @@ Invoke-RestMethod -Uri http://127.0.0.1:8000/predict -Method Post -Body $body -C
 
 ## URL Despliegue (Render)
 
-Pendiente de agregar tras el primer despliegue:
+🚀 **API en vivo:** https://producto-datos-ml-api.onrender.com
 
-```text
-https://TU-SERVICIO.onrender.com
-```
+- **Health Check:** https://producto-datos-ml-api.onrender.com/health
+- **Documentación:** https://producto-datos-ml-api.onrender.com/docs
+- **API Endpoint:** https://producto-datos-ml-api.onrender.com/predict
 
-Actualiza este bloque con el dominio real una vez desplegado.
+✅ **Estado:** Desplegado y funcionando correctamente
 
 ## Exportar modelo desde el Notebook
 
