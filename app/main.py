@@ -9,9 +9,31 @@ from .indices import calcular_indices
 
 APP_VERSION = "0.1.0"
 
+
+from fastapi.responses import HTMLResponse
+
 app = FastAPI(title="Producto-Datos-ML-API", version=APP_VERSION)
 model_service = ModelService(class_names=["urban", "rural"])  # ajusta a tus clases
 model_service.load()
+
+# Endpoint profesional en la raíz
+@app.get("/", response_class=HTMLResponse)
+def root():
+    return """
+    <html>
+        <head><title>Producto-Datos-ML-API</title></head>
+        <body style='font-family:sans-serif;'>
+            <h1>🚀 API de Clasificación de Imágenes Satelitales</h1>
+            <p>Bienvenido. Esta API está activa y lista para pruebas profesionales.</p>
+            <ul>
+                <li><a href='/docs'>Documentación interactiva (Swagger UI)</a></li>
+                <li><a href='/health'>Health check</a></li>
+                <li><b>POST /predict</b>: Endpoint para predicción (ver /docs)</li>
+            </ul>
+            <p>Para pruebas automáticas, consulta el README del repositorio.</p>
+        </body>
+    </html>
+    """
 
 
 @app.get("/health", response_model=HealthResponse)
