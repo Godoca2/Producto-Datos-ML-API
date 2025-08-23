@@ -24,7 +24,7 @@ def root():
         <head><title>Producto-Datos-ML-API</title></head>
         <body style='font-family:sans-serif;'>
             <h1>🚀 API de Clasificación de Imágenes Satelitales</h1>
-            <p>Bienvenido. Esta API está activa y lista para pruebas profesionales.</p>
+            <p>Bienvenido. Esta API de prueba está activa. Asignatura Proyecto de Datos - MSC Data Science UDD.</p>
             <ul>
                 <li><a href='/docs'>Documentación interactiva (Swagger UI)</a></li>
                 <li><a href='/health'>Health check</a></li>

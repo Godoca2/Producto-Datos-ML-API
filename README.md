@@ -78,6 +78,34 @@ Invoke-RestMethod -Uri https://producto-datos-ml-api.onrender.com/predict -Metho
 - **Documentación:** https://producto-datos-ml-api.onrender.com/docs
 - **API Endpoint:** https://producto-datos-ml-api.onrender.com/predict
 
+## Cómo probar la API con imágenes satelitales reales
+
+Puedes usar imágenes satelitales propias o de tu dataset para probar el endpoint `/predict`. La API acepta URLs públicas accesibles desde internet.
+
+### Usar Google Drive para alojar imágenes
+1. Sube tu imagen satelital a Google Drive.
+2. Haz clic derecho sobre la imagen y selecciona "Obtener enlace". Cambia el permiso a "Cualquiera con el enlace puede ver".
+3. Copia el ID de la imagen desde la URL de Google Drive. Ejemplo:
+   - URL normal: `https://drive.google.com/file/d/ID_DE_LA_IMAGEN/view?usp=sharing`
+   - El ID es la parte entre `/d/` y `/view`.
+4. Construye el enlace directo así:
+   - `https://drive.google.com/uc?export=download&id=ID_DE_LA_IMAGEN`
+5. Usa ese enlace en el campo `image_url` del endpoint `/predict` en Swagger UI o en tu cliente.
+
+### Ejemplo de uso en Swagger UI
+```json
+{
+  "image_url": "https://drive.google.com/uc?export=download&id=1-zDXGuqaOQ0xILiLVvcYMsrePu2YsIXp"
+}
+```
+
+### Respuesta esperada
+La API devolverá la predicción, probabilidades y metadatos del modelo.
+
+### Notas
+- Solo se aceptan imágenes accesibles públicamente.
+- Si usas otro servicio (Imgur, Dropbox, etc.), asegúrate de obtener el enlace directo a la imagen.
+
 ✅ **Estado:** Desplegado y funcionando correctamente
 
 ## Exportar modelo desde el Notebook
