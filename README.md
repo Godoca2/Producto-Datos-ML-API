@@ -80,7 +80,7 @@ Invoke-RestMethod -Uri https://producto-datos-ml-api.onrender.com/predict -Metho
 
 ## Cómo probar la API con imágenes satelitales reales
 
-Puedes usar imágenes satelitales propias o de tu dataset para probar el endpoint `/predict`. La API acepta URLs públicas accesibles desde internet.
+Para probar la API con imágenes satelitales propias o de tu dataset para probar el endpoint `/predict`. La API acepta URLs públicas accesibles desde internet.
 
 ### Usar Google Drive para alojar imágenes
 1. Sube tu imagen satelital a Google Drive.
@@ -117,7 +117,7 @@ Al final del notebook `notebooks/Tarea_4A_Computer_Vision_satellite-images-class
 
 Ejecuta el notebook hasta el final y verifica que ambos archivos existan en `models/`.
 
-## Despliegue en Render (resumen)
+## Despliegue en Render (resum
 
 - Crea un servicio Web (Python) en Render.
 - Define el comando de inicio:
@@ -129,14 +129,14 @@ Ejecuta el notebook hasta el final y verifica que ambos archivos existan en `mod
 - Asegúrate de subir `requirements.txt` y (opcionalmente) considera `tensorflow-cpu` si usarás el modelo Keras en Render.
 - Actualiza este README con la URL pública cuando esté lista.
 
-## Modelo de ML (archivo grande excluido)
+## Modelo de ML
 
 El archivo original `models/xception_satellite.h5` supera el límite de 100MB de GitHub y se excluyó en `.gitignore`.
 
 Para usar un modelo real coloca uno de los siguientes en `models/` (ignorados por git):
 
 1. `xception_satellite.tflite` (recomendado, versión convertida y optimizada)
-2. `xception_satellite.h5` (si lo tienes localmente)
+2. `xception_satellite.h5` (localmente)
 
 Conversión a TFLite (reduce tamaño):
 
