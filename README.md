@@ -24,7 +24,7 @@ Despliegue de un modelo de Machine Learning como API con FastAPI.
 1. Ejecutar servidor local:
 
     ```powershell
-    python -c "import uvicorn, os; os.chdir('c:/Users/Cesar/Producto-Datos-ML-API'); uvicorn.run('app.main:app', host='127.0.0.1', port=8000)"
+    python -c "import uvicorn, os; os.chdir('c:/Users/Xxxx/Producto-Datos-ML-API'); uvicorn.run('app.main:app', host='127.0.0.1', port=8000)"
     ```
 
 1. Probar endpoints:
