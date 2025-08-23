@@ -9,7 +9,7 @@ Despliegue de un modelo de Machine Learning como API con FastAPI.
 
 ## Instalación (local)
 
-1. Crear entorno virtual (opcional):
+1. Crear entorno virtual:
 
     ```powershell
     python -m venv .venv; .\.venv\Scripts\Activate.ps1

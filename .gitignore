@@ -214,3 +214,7 @@ notebooks/reorganized_dataset/
 notebooks/*.h5
 data/
 *.ipynb_checkpoints/
+
+# Ocultar archivos de instrucciones y despliegue
+Intrucciones.md
+DEPLOYMENT.md
