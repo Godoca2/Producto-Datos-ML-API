@@ -117,7 +117,7 @@ Al final del notebook `notebooks/Tarea_4A_Computer_Vision_satellite-images-class
 
 Ejecuta el notebook hasta el final y verifica que ambos archivos existan en `models/`.
 
-## Despliegue en Render (resum
+## Despliegue en Render (resumen)
 
 - Crea un servicio Web (Python) en Render.
 - Define el comando de inicio:
